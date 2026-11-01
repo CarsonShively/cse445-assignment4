@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="NationalParks">
@@ -12,17 +11,11 @@
               <xs:element name="Address">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="Number" type="xs:positiveInteger"/>
+                    <xs:element name="Number" type="xs:string"/>
                     <xs:element name="Street" type="xs:string"/>
                     <xs:element name="City" type="xs:string"/>
                     <xs:element name="State" type="xs:string"/>
-                    <xs:element name="Zip">
-                      <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                          <xs:pattern value="[0-9]{5}"/>
-                        </xs:restriction>
-                      </xs:simpleType>
-                    </xs:element>
+                    <xs:element name="Zip" type="xs:string"/>
                   </xs:sequence>
                   <xs:attribute name="NearestAirport" type="xs:string" use="required"/>
                 </xs:complexType>
@@ -35,4 +28,3 @@
     </xs:complexType>
   </xs:element>
 </xs:schema>
-
